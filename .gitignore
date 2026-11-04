@@ -1,0 +1,24 @@
+# Dependencies
+vendor/
+
+# Environment / local config backups
+*.env
+*.local
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary & cache files
+tmp/
+*.tmp
+sess_*
+
