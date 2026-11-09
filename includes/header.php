@@ -28,19 +28,45 @@ $here = basename($_SERVER['PHP_SELF']);
       <span class="brand-badge"><i class="bi bi-scissors"></i></span>
       <span class="brand-name"><?= e(get_setting('salon_name', SITE_NAME)) ?></span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Menu">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler custom-burger" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="burger-bar top-bar"></span>
+      <span class="burger-bar mid-bar"></span>
+      <span class="burger-bar btm-bar"></span>
     </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link <?= $here === 'index.php' ? 'active' : '' ?>" href="<?= BASE_URL ?>index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link <?= $here === 'contact.php' ? 'active' : '' ?>" href="<?= BASE_URL ?>contact.php">Book Appointment</a></li>
-        <li class="nav-item"><a class="nav-link <?= $here === 'feedback.php' ? 'active' : '' ?>" href="<?= BASE_URL ?>feedback.php">Submit Feedback</a></li>
+    <div class="collapse navbar-collapse mobile-menu-panel" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
+        <li class="nav-item">
+          <a class="nav-link <?= $here === 'index.php' ? 'active' : '' ?>" href="<?= BASE_URL ?>index.php">
+            <i class="bi bi-house-door d-lg-none me-2"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?= $here === 'contact.php' ? 'active' : '' ?>" href="<?= BASE_URL ?>contact.php">
+            <i class="bi bi-calendar-event d-lg-none me-2"></i>Book Appointment
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?= $here === 'feedback.php' ? 'active' : '' ?>" href="<?= BASE_URL ?>feedback.php">
+            <i class="bi bi-chat-heart d-lg-none me-2"></i>Submit Feedback
+          </a>
+        </li>
         <?php if (is_logged_in()): ?>
-          <li class="nav-item"><a class="btn btn-salon btn-sm ms-lg-2" href="<?= dashboard_url() ?>"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="<?= BASE_URL ?>modules/auth/logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a class="btn btn-salon btn-sm ms-lg-2 w-100 w-lg-auto" href="<?= dashboard_url() ?>">
+              <i class="bi bi-speedometer2"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-danger-emphasis" href="<?= BASE_URL ?>modules/auth/logout.php">
+              <i class="bi bi-box-arrow-right d-lg-none me-2"></i>Logout
+            </a>
+          </li>
         <?php else: ?>
-          <li class="nav-item"><a class="btn btn-salon btn-sm ms-lg-2" href="<?= BASE_URL ?>modules/auth/login.php"><i class="bi bi-box-arrow-in-right"></i> Staff Login</a></li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a class="btn btn-salon btn-sm ms-lg-2 w-100 w-lg-auto" href="<?= BASE_URL ?>modules/auth/login.php">
+              <i class="bi bi-box-arrow-in-right"></i> Staff Login
+            </a>
+          </li>
         <?php endif; ?>
       </ul>
     </div>
