@@ -70,16 +70,19 @@ body {
   border-radius: 4px;
   transition: all 0.35s ease-in-out;
 }
-/* Smooth morph to 'X' when open */
-.custom-burger:not(.collapsed) .top-bar {
+/* Smooth morph to 'X' ONLY when explicitly opened */
+.custom-burger[aria-expanded="true"] .top-bar,
+.custom-burger:not(.collapsed)[aria-expanded="true"] .top-bar {
   transform: translateY(7px) rotate(45deg);
   background-color: var(--salon-rose);
 }
-.custom-burger:not(.collapsed) .mid-bar {
+.custom-burger[aria-expanded="true"] .mid-bar,
+.custom-burger:not(.collapsed)[aria-expanded="true"] .mid-bar {
   opacity: 0;
   transform: translateX(-8px);
 }
-.custom-burger:not(.collapsed) .btm-bar {
+.custom-burger[aria-expanded="true"] .btm-bar,
+.custom-burger:not(.collapsed)[aria-expanded="true"] .btm-bar {
   transform: translateY(-7px) rotate(-45deg);
   background-color: var(--salon-rose);
 }

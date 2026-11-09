@@ -28,7 +28,7 @@ $here = basename($_SERVER['PHP_SELF']);
       <span class="brand-badge"><i class="bi bi-scissors"></i></span>
       <span class="brand-name"><?= e(get_setting('salon_name', SITE_NAME)) ?></span>
     </a>
-    <button class="navbar-toggler custom-burger" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler custom-burger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="burger-bar top-bar"></span>
       <span class="burger-bar mid-bar"></span>
       <span class="burger-bar btm-bar"></span>
