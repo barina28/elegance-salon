@@ -18,7 +18,7 @@ $here = basename($_SERVER['PHP_SELF']);
 <title><?= e($page_title) ?> - <?= e(get_setting('salon_name', SITE_NAME)) ?></title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<link href="<?= BASE_URL ?>assets/css/style.css" rel="stylesheet">
+<link href="<?= BASE_URL ?>assets/css/style.css?v=<?= time() ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -28,8 +28,10 @@ $here = basename($_SERVER['PHP_SELF']);
       <span class="brand-badge"><i class="bi bi-scissors"></i></span>
       <span class="brand-name"><?= e(get_setting('salon_name', SITE_NAME)) ?></span>
     </a>
-    <button class="navbar-toggler salon-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler salon-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="btn-burger-pill">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </span>
     </button>
     <div class="collapse navbar-collapse mobile-menu-panel" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
