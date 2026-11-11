@@ -49,20 +49,20 @@ body {
   box-shadow: none !important;
 }
 .btn-burger-pill {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--salon-rose), var(--salon-gold));
   border: none;
-  border-radius: 11px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease-in-out;
 }
 .btn-burger-pill i {
   color: #ffffff !important;
-  font-size: 1.6rem !important;
+  font-size: 1.35rem !important;
   line-height: 1;
 }
 .salon-navbar .salon-toggler:hover .btn-burger-pill {
