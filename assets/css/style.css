@@ -40,51 +40,34 @@ body {
   background-color: rgba(201, 162, 39, 0.08);
 }
 
-/* Modern Animated Burger Button */
-.custom-burger {
-  width: 44px;
-  height: 40px;
-  padding: 8px 9px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 1px solid rgba(201, 162, 39, 0.45) !important;
-  background: linear-gradient(145deg, rgba(201, 162, 39, 0.15), rgba(183, 110, 121, 0.15));
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* Salon Responsive Navbar Toggler (Burger Button) */
+.salon-navbar .salon-toggler {
+  border: 1.5px solid var(--salon-gold) !important;
+  background: rgba(201, 162, 39, 0.18) !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: all 0.25s ease-in-out;
 }
-.custom-burger:hover {
-  background: linear-gradient(145deg, rgba(201, 162, 39, 0.25), rgba(183, 110, 121, 0.25));
-  border-color: var(--salon-gold) !important;
-  transform: scale(1.04);
+.salon-navbar .salon-toggler:hover {
+  background: rgba(201, 162, 39, 0.3) !important;
+  border-color: #ffd875 !important;
+  transform: scale(1.05);
 }
-.custom-burger:focus {
-  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.35) !important;
+.salon-navbar .salon-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.4) !important;
 }
-.burger-bar {
-  display: block;
-  width: 100%;
-  height: 2.5px;
-  background-color: var(--salon-gold);
-  border-radius: 4px;
-  transition: all 0.35s ease-in-out;
+/* Crisp high-contrast gold 3-bar icon */
+.salon-navbar .salon-toggler .navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c9a227' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.6' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-size: 100% 100%;
 }
-/* Smooth morph to 'X' ONLY when explicitly opened */
-.custom-burger[aria-expanded="true"] .top-bar,
-.custom-burger:not(.collapsed)[aria-expanded="true"] .top-bar {
-  transform: translateY(7px) rotate(45deg);
-  background-color: var(--salon-rose);
-}
-.custom-burger[aria-expanded="true"] .mid-bar,
-.custom-burger:not(.collapsed)[aria-expanded="true"] .mid-bar {
-  opacity: 0;
-  transform: translateX(-8px);
-}
-.custom-burger[aria-expanded="true"] .btm-bar,
-.custom-burger:not(.collapsed)[aria-expanded="true"] .btm-bar {
-  transform: translateY(-7px) rotate(-45deg);
-  background-color: var(--salon-rose);
+/* When opened, switch smoothly to a gold 'X' */
+.salon-navbar .salon-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b76e79' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.6' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e") !important;
 }
 
 /* Floating Glassmorphism Mobile Dropdown Menu */
