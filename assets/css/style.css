@@ -49,25 +49,28 @@ body {
   box-shadow: none !important;
 }
 .btn-burger-pill {
-  width: 46px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--salon-rose), var(--salon-rose-d));
-  border: 2px solid var(--salon-gold);
+  background: linear-gradient(135deg, var(--salon-rose), var(--salon-gold));
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease-in-out;
 }
+.btn-burger-pill i {
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  line-height: 1;
+}
 .salon-navbar .salon-toggler:hover .btn-burger-pill {
-  background: linear-gradient(135deg, #c77b86, var(--salon-rose));
-  border-color: #ffe685;
-  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.5);
-  transform: scale(1.06);
+  filter: brightness(1.12);
+  transform: scale(1.05);
 }
 .salon-navbar .salon-toggler:focus .btn-burger-pill {
-  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.6);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.5);
 }
 
 /* Floating Glassmorphism Mobile Dropdown Menu */
