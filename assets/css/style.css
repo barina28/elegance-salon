@@ -58,12 +58,14 @@ body {
   border: none;
   border-radius: 10px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
-  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  pointer-events: none;
 }
 .btn-burger-pill i {
   color: #ffffff !important;
   font-size: 1.35rem !important;
   line-height: 1;
+  pointer-events: none;
 }
 .salon-navbar .salon-toggler:hover .btn-burger-pill {
   filter: brightness(1.12);
@@ -73,48 +75,39 @@ body {
   box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.5);
 }
 
-/* Floating Glassmorphism Mobile Dropdown Menu */
+/* Floating Mobile Dropdown Menu (Fast & Hardware Accelerated) */
 @media (max-width: 991.98px) {
   .mobile-menu-panel {
-    background: rgba(35, 32, 28, 0.96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(201, 162, 39, 0.25);
-    border-radius: 16px;
-    margin-top: 12px;
-    padding: 12px 18px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-    animation: slideDownMenu 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #23201c;
+    border: 1px solid rgba(201, 162, 39, 0.35);
+    border-radius: 14px;
+    margin-top: 10px;
+    padding: 10px 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Optimize bootstrap collapse transition for high responsiveness */
+  .navbar-collapse.collapsing {
+    transition: height 0.22s ease !important;
   }
 
   .mobile-menu-panel .nav-item {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .mobile-menu-panel .nav-link {
-    padding: 10px 14px;
+    padding: 9px 12px;
     font-size: 0.95rem;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 8px;
     border-left: 3px solid transparent;
+    transition: background 0.15s ease, color 0.15s ease;
   }
   .mobile-menu-panel .nav-link:hover,
   .mobile-menu-panel .nav-link.active {
     background-color: rgba(201, 162, 39, 0.12);
     border-left-color: var(--salon-gold);
     color: var(--salon-gold);
-    transform: translateX(4px);
-  }
-}
-
-@keyframes slideDownMenu {
-  from {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }
 
