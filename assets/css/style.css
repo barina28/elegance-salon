@@ -40,34 +40,35 @@ body {
   background-color: rgba(201, 162, 39, 0.08);
 }
 
-/* Salon Responsive Navbar Toggler (Burger Button) */
+/* Salon Responsive Navbar Toggler (Burger Button - High Contrast Rose Gold & Bright Gold) */
 .salon-navbar .salon-toggler {
-  border: 1.5px solid var(--salon-gold) !important;
-  background: rgba(201, 162, 39, 0.18) !important;
+  border: 2px solid #dfb742 !important;
+  background: linear-gradient(135deg, var(--salon-rose), var(--salon-rose-d)) !important;
   border-radius: 8px !important;
-  padding: 6px 10px !important;
+  padding: 7px 11px !important;
   outline: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35) !important;
   transition: all 0.25s ease-in-out;
 }
 .salon-navbar .salon-toggler:hover {
-  background: rgba(201, 162, 39, 0.3) !important;
-  border-color: #ffd875 !important;
+  background: linear-gradient(135deg, #c77b86, var(--salon-rose)) !important;
+  border-color: #ffe685 !important;
+  box-shadow: 0 4px 15px rgba(223, 183, 66, 0.45) !important;
   transform: scale(1.05);
 }
 .salon-navbar .salon-toggler:focus {
-  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(223, 183, 66, 0.6) !important;
 }
-/* Crisp high-contrast gold 3-bar icon */
+/* Pure White high-contrast 3-bar icon on Rose Gold background */
 .salon-navbar .salon-toggler .navbar-toggler-icon {
   width: 24px;
   height: 24px;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c9a227' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.6' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   background-size: 100% 100%;
 }
-/* When opened, switch smoothly to a gold 'X' */
+/* When opened, crisp Bright Gold 'X' */
 .salon-navbar .salon-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b76e79' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.6' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffd875' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e") !important;
 }
 
 /* Floating Glassmorphism Mobile Dropdown Menu */
